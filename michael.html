@@ -1,12 +1,83 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <title>Cines Argentinos</title>
-    <link rel="stylesheet" href="estilos.css">
+  <meta charset="utf-8">
+  <title>Cines Argentinos</title>
+  <link rel="stylesheet" href="estilos.css">
 </head>
 
+<body>
+   
+    <a href="index.html" class="flecha" aria-label="Volver">
+       <img src="imagenes/elementos-svg/flecha-atras.svg" alt="Volver" width="21" height="20">
+    </a>
 
+    <section class="detalle__contenido">
+      <img
 
-
+        class="detalle__poster"
+      src="imagenes/imag_individuales_medidas_422x593/michael-jackson-422x593.png" alt="Poster Michael" width="422" height="593">
+ 
+    
+      <div class="detalle__info">
+ 
+        <h2 class="detalle__titulo">MICHAEL</h2>
+ 
+        <div class="detalle__datos">
+          <ul class="detalle__duracion-etc">
+            <li>Duración:</li>
+            <li>Fecha de estreno:</li>
+            <li>Formatos disponibles:</li>
+            <li>Distribuidor:</li>
+            <li>Género:</li>
+            <li>Idioma:</li>
+          </ul>
+          <ul class="detalle__valores">
+            <li>2h 10m</li>
+            <li>23 de Abril, 2026</li>
+            <li>2D · D-BOX</li>
+            <li>UNITED INTERNATIONAL PICTURES S.R.L.</li>
+            <li>Biografía, Historia, Drama</li>
+            <li>Inglés Subtitulada, Español</li>
+          </ul>
+        </div>
+ 
+        <p class="detalle__sinopsis">
+          La película narra la vida de Michael Jackson más allá de la música, recorriendo su trayectoria desde el descubrimiento de su extraordinario talento como líder de los Jackson Five hasta convertirse en el artista visionario cuya ambición creativa le impulsó a convertirse en el artista más grande del mundo. Destacando tanto su vida fuera del escenario como algunas de las actuaciones más emblemáticas de sus inicios en solitario, la película ofrece al público un asiento en primera fila para ver a Michael Jackson como nunca antes. Aquí es donde comienza su historia
+        </p>
+ 
+        <div class="boton-cines">
+          <button class="boton-cines__btn" id="btnCines" aria-expanded="false">
+            cines
+          </button>
+          <div class="boton-cines__opciones" id="opcionesCines">
+            <div class="boton-cines__opcion">
+              <p class="boton-cines__nombre">multiplex</p>
+            </div>
+            <div class="boton-cines__opcion">
+              <p class="boton-cines__nombre">cinemark</p>
+            </div>
+            <div class="boton-cines__opcion">
+              <p class="boton-cines__nombre">cinema</p>
+            </div>
+          </div>
+        </div>
+ 
+      </div>
+    </section>
+ 
+  </main>
+ 
+  <script>
+    const btn = document.getElementById('btnCines');
+    const opciones = document.getElementById('opcionesCines');
+ 
+    btn.addEventListener('click', () => {
+      const abierto = opciones.classList.toggle('boton-cines__opciones--visible');
+      btn.setAttribute('aria-expanded', abierto);
+    });
+  </script>
+ 
+</body>
 </html>
