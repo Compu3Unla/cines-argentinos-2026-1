@@ -1,43 +1,18 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: "avant garde book";
+    font-family: avant garde book;
     src: url(fuentes/avant-garde-book.ttf);
     font-weight: normal;
     font-style: normal;
-}
 
-@font-face {
-    font-family: "avant garde medium";
+    font-family: avant garde medium;
     src: url(fuentes/avant-garde-medium.ttf);
-    font-weight: 500;
+    font-weight: medium;
     font-style: normal;
-}
 
-@font-face {
-    font-family: "avant garde semi";
+    font-family: avant garde semi;
     src: url(fuentes/avant-garde-semi.ttf);
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Merriweather Sans";
-    src: url(fuentes/MerriweatherSans-Regular.ttf);
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "merriweather sans medium";
-    src: url(fuentes/MerriweatherSans-Medium.ttf);
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "merriweather sans bold";
-    src: url(fuentes/MerriweatherSans-Bold.ttf);
     font-weight: bold;
     font-style: normal;
 }
@@ -49,40 +24,121 @@
 header {
     background-color: #2E058B;
     height: 83px;
+
+    nav {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        margin: 10px;
+    }
+
+    #botones {
+        gap: 58px;
+        list-style: none;
+        display: flex;
+        margin: 10px;
+        padding: 10px;
+
+        li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        li a:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
-header nav {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+body {
+    background: linear-gradient(180deg, #9B6FD5 0%, #2E058B 58.49%, #0C0125 100%);
 }
 
-header .logo {
-    display: flex;
-    margin: 10px;
+main {
+    
+    #seccion-estrenos {
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 0 20px;
+    }
+
+    .contenedor-acordeon {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        height: 550px;
+    }
+
+    .tarjeta-estreno {
+        position: relative;
+        flex: 1;
+        height: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .bloque-info {
+        position: absolute;
+        bottom: 40px;
+        left: 30px;
+        right: 30px;
+        background-color: rgba(77, 39, 148, 0.90);
+        padding: 25px;
+        border-radius: 15px;
+        z-index: 2;
+        box-sizing: border-box;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    }
+
+    .fecha-estreno {
+        color: #fff;
+        font-size: 17px;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 8px;
+        font-family: 'avant garde semi', sans-serif;
+    }
+
+    p {
+        font-size: 13px;
+        line-height: 1.4;
+        color: rgba(255, 255, 255, 0.9);
+        margin: 0 0 15px 0;
+    }
+
+    .tarjeta-estreno:hover {
+        flex: 2.8;
+    }
+
+    .tarjeta-estreno:hover .bloque-info {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        transition-delay: 0.15s;
+    }
+
 }
-
-header #botones {
-    gap: 58px;
-    list-style: none;
-    display: flex;
-    margin: 10px;
-    padding: 10px;
-}
-
-header #botones li a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-header #botones li a:hover {
-    text-decoration: underline;
-}
-
-
-
 
 /* Esta seccion es de michael */
 body {
@@ -232,5 +288,3 @@ width: 987px;
 .boton-cines__opcion:hover {
   opacity: 0.85;
 }
- 
- 
