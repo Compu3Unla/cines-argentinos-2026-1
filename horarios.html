@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Cines Argentinos</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body class="body-general">
 
-     <header>
+    <header>
         <nav>
             <div class="logo">
                 <img src="imagenes/elementos-svg/logo-header.svg">
@@ -22,19 +24,19 @@
         </nav>
     </header>
 
-<main class="container">
-    <h1 class="titulo-h">Encontrá tu proximó plan</h1>
+    <main class="container">
+        <h1 class="titulo-h">Encontrá tu proximó plan</h1>
 
-    <section class="acordeon">
-        <div class="acordeon-item">
-            <input type="checkbox" id="check-cines" class="acordeon-flecha">
-            <label for="check-cines" class="acordeon-header">
-                <div class="primer-texto">
+        <section class="acordeon">
+            <div class="acordeon-item">
+                <input type="checkbox" id="check-cines" class="acordeon-flecha">
+                <label for="check-cines" class="acordeon-header">
+                    <div class="primer-texto">
                         <h2>CINES</h2>
                         <p>Seleccione un cine</p>
-                </div>
-            </label>
-            <div class="acordeon-contenido">
+                    </div>
+                </label>
+                <div class="acordeon-contenido">
                     <hr class="dividir">
                     <ul class="lista">
                         <li><a href="#">CINEMARK</a></li>
@@ -42,17 +44,17 @@
                         <li><a href="#">CINEMA</a></li>
                     </ul>
                 </div>
-        </div>
+            </div>
 
-        <div class="acordeon-item">
-             <input type="checkbox" id="check-peliculas" class="acordeon-flecha">
-             <label for="check-peliculas" class="acordeon-header">
-             <div class="primer-texto">
+            <div class="acordeon-item">
+                <input type="checkbox" id="check-peliculas" class="acordeon-flecha">
+                <label for="check-peliculas" class="acordeon-header">
+                    <div class="primer-texto">
                         <h2>PELÍCULAS</h2>
                         <p>Seleccione una película</p>
-                </div>
-             </label>
-             <div class="acordeon-contenido">
+                    </div>
+                </label>
+                <div class="acordeon-contenido">
                     <hr class="dividir">
                     <ul class="lista">
                         <li><a href="#">Michael</a></li>
@@ -69,17 +71,17 @@
                         <li><a href="#">Billie Eillish</a></li>
                     </ul>
                 </div>
-        </div>
+            </div>
 
-        <div class="acordeon-item">
-             <input type="checkbox" id="check-zona" class="acordeon-flecha">
-             <label for="check-zona" class="acordeon-header">
-             <div class="primer-texto">
-                <h2>ZONA</h2>
-                <p>Seleccione una zona</p>
-             </div>
-             </label>
-             <div class="acordeon-contenido">
+            <div class="acordeon-item">
+                <input type="checkbox" id="check-zona" class="acordeon-flecha">
+                <label for="check-zona" class="acordeon-header">
+                    <div class="primer-texto">
+                        <h2>ZONA</h2>
+                        <p>Seleccione una zona</p>
+                    </div>
+                </label>
+                <div class="acordeon-contenido">
                     <hr class="dividir">
                     <ul class="lista">
                         <li><a href="#">Av.Corrientes</a></li>
@@ -89,68 +91,87 @@
                 </div>
             </div>
 
-        <div class="acordeon-item">
-             <input type="checkbox" id="check-promociones" class="acordeon-flecha">
-             <label for="check-promociones" class="acordeon-header">
-             <div class="primer-texto">
-                <h2>PROMOCIONES</h2>
+            <div class="acordeon-item">
+                <input type="checkbox" id="check-promociones" class="acordeon-flecha">
+                <label for="check-promociones" class="acordeon-header">
+                    <div class="primer-texto">
+                        <h2>PROMOCIONES</h2>
                         <p>Seleccione una promo</p>
-            </div>
-            </label>
+                    </div>
+                </label>
 
-        <div class="acordeon-contenido">
-            <hr class="dividir">
-            <ul class="lista">
-                <li><a href="#">Mercado Pago</a></li>
-                <li><a href="#">Cinépolis</a></li>
-                <li><a href="#">Personal Pay</a></li>
-                <li><a href="#">Banco Nación</a></li>
-            </ul>
-         </div>
-    </section>
-
-    <section class="audio">
-                <audio controls autoplay>
-                    <source src="audio/by-your-side.mp3" type="audio/mp3">
-                </audio>
-                <p>Tomate tu tiempo...</p>
-            </section>
-        </section>
-</main>
-
-<footer>
-    <div class="contenedor-footer">
-        <section id="marca">
-            <img src="imagenes/elementos-svg/logo-cines-frase.svg" width="80px" height="30px" alt="cines argentinos">
-            <p class="eslogan">Viví el cine, viví la experiencia</p>
-            <p class="copyright">© 2026 Cines Argentinos. Todos los derechos reservados.</p>
+                <div class="acordeon-contenido">
+                    <hr class="dividir">
+                    <ul class="lista">
+                        <li><a href="#">Mercado Pago</a></li>
+                        <li><a href="#">Cinépolis</a></li>
+                        <li><a href="#">Personal Pay</a></li>
+                        <li><a href="#">Banco Nación</a></li>
+                    </ul>
+                </div>
         </section>
 
-        <section id="email">
-            <h3>Recibí novedades y promociones</h3>
-            <!-- Correo -->
-            <input type="email" name="Email" id="Email" placeholder="email...">
-            <button type="submit" class="boton-enviar">ENVIAR</button>
-        </section>
-
-        <section id="navegacion">
-            <h3>NAVEGACIÓN</h3>
-            <ul>
-                <li><a href="index.html">Cartelera</a></li>
-                <li><a href="index.html">Promociones</a></li>
-                <li><a href="horarios.html">Horarios</a></li>
-                <li><a href="proximos-estrenos1.html">Estrenos</a></li>
-            </ul>
-        </section>
-
-        <section id="redes">
-            <h3>SEGUINOS</h3>
-            <div class="iconos-redes">
-                <a href="#"><img src="imagenes/elementos-svg/logo-ig.svg" alt="instagram"></a>
-                 <a href="#"><img src="imagenes/elementos-svg/logo-facebook.svg" alt="facebook"></a>
-                  <a href="#"><img src="imagenes/elementos-svg/logo-x.svg" alt="twitter"></a>
+        <section class="audio">
+            <p>by your side</p>
+            <audio id="miCancion" src="audio/by-your-side.mp3" loop></audio>
+            <div class="controles">
+                <button id="btnPlay" onclick="reproducir()">Play</button>
+                <button id="btnPause" onclick="pausar()" style="display: none;">Pausa</button>
             </div>
         </section>
+
+        <script>
+            const cancion = document.getElementById('miCancion');
+            const btnPlay = document.getElementById('btnPlay');
+            const btnPause = document.getElementById('btnPause');
+            function reproducir() {
+                cancion.play();
+                btnPlay.style.display = 'none';
+                btnPause.style.display = 'inline-block';
+            }
+            function pausar() {
+                cancion.pause();
+                btnPause.style.display = 'none';
+                btnPlay.style.display = 'inline-block';
+            }
+        </script>
+    </main>
+
+    <footer>
+        <div class="contenedor-footer">
+            <div id="marca">
+                <img src="imagenes/elementos-svg/logo-cines-frase.svg" width="90px" height="40px"
+                    alt="cines argentinos">
+                <p class="eslogan">Viví el cine, viví la experiencia</p>
+                <p class="copyright">© 2026 Cines Argentinos. Todos los derechos reservados.</p>
+            </div>
+
+            <div id="email">
+                <h3>Recibí novedades y promociones</h3>
+                <input type="email" name="Email" id="Email" placeholder="email...">
+                <button type="submit" class="boton-enviar">ENVIAR</button>
+            </div>
+
+            <div id="navegacion">
+                <h3>NAVEGACIÓN</h3>
+                <ul>
+                    <li><a href="index.html">Cartelera</a></li>
+                    <li><a href="index.html">Promociones</a></li>
+                    <li><a href="horarios.html">Horarios</a></li>
+                    <li><a href="proximos-estrenos1.html">Estrenos</a></li>
+                </ul>
+            </div>
+
+            <div id="redes">
+                <h3>SEGUINOS</h3>
+                <div class="iconos-redes">
+                    <a href="#"><img src="imagenes/elementos-svg/logo-ig.svg" width="30" height="30"
+                            alt="instagram"></a>
+                    <a href="#"><img src="imagenes/elementos-svg/logo-facebook.svg" width="30" height="30"
+                            alt="facebook"></a>
+                    <a href="#"><img src="imagenes/elementos-svg/logo-x.svg" width="30" height="30" alt="twitter"></a>
+                </div>
+            </div>
         </div>
     </footer>
 </body>

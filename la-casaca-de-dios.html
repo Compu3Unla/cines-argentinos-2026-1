@@ -1,12 +1,104 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <title>Cines Argentinos</title>
-    <link rel="stylesheet" href="estilos.css">
+  <meta charset="utf-8">
+  <title>Cines Argentinos</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
+<body class="pagina-detalle">
 
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="imagenes/elementos-svg/logo-header.svg">
+      </div>
+
+      <ul id="botones">
+        <li><a href="index.html">Cartelera</a></li>
+        <li><a href="proximos-estrenos1.html">Próximos estrenos</a></li>
+        <li><a href="horarios.html">Horarios</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="detalle">
+
+      <a href="index.html" class="flecha" aria-label="Volver">
+
+        <img src="imagenes/elementos-svg/flecha-atras.svg" alt="Volver" width="21" height="20">
+
+      </a>
+
+      <section class="detalle__contenido">
+
+        <img class="detalle__poster" src="imagenes/imag_individuales_medidas_422x593/la-casaca-de-dios-422x593.png"
+          alt="poster la casaca de dios" width="422" height="593">
+
+        <div class="detalle__info">
+          <h1 class="detalle__titulo">LA CASACA DE DIOS</h1>
+
+          <div class="detalle__datos">
+            <ul class="detalle__duracion-etc">
+
+              <li>Duración:</li>
+              <li>Fecha de estreno:</li>
+              <li>Formatos disponibles:</li>
+              <li>Distribuidor:</li>
+              <li>Género:</li>
+              <li>Idioma:</li>
+            </ul>
+
+            <ul class="detalle__valores">
+              <li>95m</li>
+              <li>09 de Abril, 2026</li>
+              <li>2D</li>
+              <li>Moving Pics</li>
+              <li>Comedia, Drama</li>
+              <li>Español</li>
+            </ul>
+          </div>
+
+          <p class="detalle__sinopsis">
+            “La casaca de Dios” está basada en un hecho insólito pero real que revive la increíble y mítica historia de
+            la camiseta azul de Maradona en el Mundial de 1986 con la que hizo el gol del siglo y que luego fue
+            subastada como el artículo más caro de la historia del deporte. Años después, con el Mundial de Qatar 2022
+            en el horizonte, Tití Malvestiti y su hija Erika se enteran de que la mítica camiseta está a punto de ser
+            subastada por un coleccionista millonario. Para él, esta camiseta representa mucho más que un objeto
+            histórico: es parte esencial de su vida. Junto a su hija emprende una misión llena de humor, emoción y
+            valentía, un viaje donde lo absurdo se mezcla con la profunda identidad argentina.
+
+
+          </p>
+
+          <div class="boton-cines">
+            <input type="checkbox" id="btnCinesToggle" class="boton-cines__toggle">
+            <label for="btnCinesToggle" class="boton-cines__btn">cines</label>
+            <div class="boton-cines__opciones">
+              <div class="boton-cines__opcion">
+                <a href="https://multiplex.com.ar/?utm_source=google&utm_medium=cpc&utm_campaign=22627677056&utm_content=180978942152&utm_term=multiplex&gad_source=1&gad_campaignid=22627677056&gbraid=0AAAAADJ9N9jovgQSdW-7PkL6B4JM4eVbZ&gclid=Cj0KCQjwrs7RBhDuARIsAIVfBD3gx6D92RRbmfJLaD5qY9yWnqnxOICledqBqhzFAklyXzGQqybz1NEaAp7IEALw_wcB"
+                  class="boton-cines__nombre">multiplex</a>
+              </div>
+              <div class="boton-cines__opcion">
+                <a href="https://www.cinemark.com.ar/?gad_source=1&gad_campaignid=17439731004&gbraid=0AAAAAC_nbNM5vk9GXD0jhl2VvS_eV_CHF&gclid=Cj0KCQjwrs7RBhDuARIsAIVfBD1sl7_CY5HnyxiDhuL-IfpeNkNA62iJxeFOXy5VAv7a9_MCmrkVZa8aAis5EALw_wcB"
+                  class="boton-cines__nombre">cinemark</a>
+              </div>
+              <div class="boton-cines__opcion">
+                <a href="https://www.cinemaadrogue.com/?https://www.cinemaadrogue.com/&utm_source=google&utm_medium=cpc&utm_campaign=cinemaadrogue-cartelera-clics&gad_source=1&gad_campaignid=23812935322&gbraid=0AAAAADpCTIPDtyhkufpNlgro9wVVQCR3M&gclid=Cj0KCQjwrs7RBhDuARIsAIVfBD0MtY7Q4joZzBqunYIFhByqyvdUtlGDuFbePLJsoksOs4QoIFb71CEaAimAEALw_wcB"
+                  class="boton-cines__nombre">cinema</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+</body>
 
 
 </html>

@@ -17,17 +17,17 @@
     font-style: normal;
 
     font-family: merriweather regular;
-    src: url(fuentes/MerriweatherSans-Regular.ttf);
+    src: url(fuentes/merriweathersans-regular.ttf);
     font-weight: normal;
     font-style: normal;
 
     font-family: merriweather bold;
-    src: url(fuentes/MerriweatherSans-Bold.ttf);
+    src: url(fuentes/merriweathersans-bold.ttf);
     font-weight: bold;
     font-style: normal;
 
     font-family: merriweather light;
-    src: url(fuentes/MerriweatherSans-Light.ttf);
+    src: url(fuentes/merriweathersans-light.ttf);
     font-weight: lighter;
     font-style: normal;
 }
@@ -36,19 +36,20 @@
     font-family: 'avant garde book', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 header {
     background-color: #2E058B;
     height: 83px;
 
-
     nav {
         padding: 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-
+        position: relative;
+        bottom: 10px;
     }
 
     .logo {
@@ -80,9 +81,11 @@ header {
     min-height: 100vh;
 }
 
-main {
 
-    /* Esta seccion es de proximos estrenos */
+/* SECCION PROXIMOS ESTRENOS */
+
+.proximos-estrenos {
+
     #seccion-estrenos {
         max-width: 1200px;
         margin: 50px auto;
@@ -113,7 +116,6 @@ main {
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 1;
     }
 
     .bloque-info {
@@ -124,27 +126,19 @@ main {
         background-color: rgba(77, 39, 148, 0.90);
         padding: 25px;
         border-radius: 15px;
-        z-index: 2;
-        box-sizing: border-box;
-        opacity: 0;
         visibility: hidden;
         transform: translateY(20px);
         transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
     }
 
     .fecha-estreno {
-        color: #fff;
         font-size: 17px;
-        font-weight: bold;
-        display: block;
         margin-bottom: 8px;
-        font-family: 'avant garde semi', sans-serif;
     }
 
     p {
         font-size: 13px;
         line-height: 1.4;
-        color: rgba(255, 255, 255, 0.9);
         margin: 0 0 15px 0;
     }
 
@@ -161,94 +155,197 @@ main {
 
 }
 
-/* Esta seccion es de peliculas de cartelera */
-.body-peliculas {
-    margin: 30px;
-    padding: 0;
-    background-color: #2C0586;
-    min-height: 100vh;
-}
-
-
-.detalle {
-    position: relative;
-    padding: 57px 71px 14px 71px;
+/* INDEX */
+.contenedor-home {
     max-width: 1440px;
+    width: 100%;
     margin: 0 auto;
-}
-
-.flecha {
-    line-height: 90px;
-}
-
-.flecha svg {
-    stroke: #FFFFFF;
-}
-
-.detalle__contenido {
+    padding: 40px 71px 60px 71px;
     display: flex;
+    flex-direction: column;
     gap: 50px;
 }
 
-.detalle__poster {
-    border-radius: 14px;
+.titulo-seccion {
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.subtitulo-seccion {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.carrusel-contenedor {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carrusel-track {
+    display: flex;
+    gap: 25px;
+    width: max-content;
+    animation: slider-infinito 10s linear infinite;
+}
+
+.carrusel-track:hover {
+    animation-play-state: paused;
+}
+
+.tarjeta-destacada {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.tarjeta-destacada img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+}
+
+@keyframes slider-infinito {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 12.5px));
+    }
+}
+
+.cuadricula-promos {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.tarjeta-promo:hover img {
+    opacity: 0.9;
+}
+
+.grilla-cartelera {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px 20px;
+}
+
+.item-pelicula img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.item-pelicula:hover img {
+    transform: scale(1.03);
+}
+
+.flecha-subir {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.flecha-subir a {
+    color: #D8C2F3;
+    font-size: 24px;
+    text-decoration: none;
 }
 
 
-.detalle__info {
+
+/* PAGINAS DE LAS PELICULAS */
+.pagina-detalle {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #9B6FD5 0%, #2E058B 58.49%, #0C0125 100%);
+    min-height: 100vh;
+}
+
+.pagina-detalle main {
+    display: block;
+    width: 100%;
+}
+
+.pagina-detalle main p {
+    font-size: 16px;
+    line-height: 25px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.pagina-detalle .detalle {
+    padding: 57px 71px 14px 71px;
+    max-width: 1440px;
+}
+
+.pagina-detalle .flecha {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+
+.pagina-detalle .detalle__contenido {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.pagina-detalle .detalle__poster {
+    border-radius: 14px;
+}
+
+.pagina-detalle .detalle__info {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-
-.detalle__titulo {
-    margin: 0;
+.pagina-detalle .detalle__titulo {
     font-size: 48px;
     font-weight: 400;
-    font-family: 'Merriweather Sans', sans-serif;
-    color: #FFFFFF;
 }
 
-
-.detalle__datos {
+.pagina-detalle .detalle__datos {
     display: flex;
     gap: 50px;
 }
 
-.detalle__duracion-etc,
-.detalle__valores {
+.pagina-detalle .detalle__duracion-etc,
+.pagina-detalle .detalle__valores {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-.detalle__duracion-etc li,
-.detalle__valores li {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
+.pagina-detalle .detalle__duracion-etc li,
+.pagina-detalle .detalle__valores li {
     line-height: 24px;
-    color: #FFFFFF;
 }
 
-.detalle__sinopsis {
-    color: #FFF;
-    font-family: "Merriweather Sans regular", sans-serif;
-    line-height: 25px;
-    width: 987px;
+.pagina-detalle .detalle__sinopsis {
+    max-width: 750px;
+    margin: 10px 0;
 }
 
-.boton-cines {
+.pagina-detalle .boton-cines {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    margin-top: 15px;
 }
 
-.boton-cines__btn {
+.pagina-detalle .boton-cines__toggle {
+    display: none;
+}
+
+.pagina-detalle .boton-cines__btn {
     display: flex;
     width: 423px;
     height: 58px;
@@ -258,19 +355,17 @@ main {
     border-radius: 14px;
     background:
         linear-gradient(#2E058B, #2E058B) padding-box,
-        linear-gradient(90deg,
-            #816C14 0%,
-            #E1BE2C 50%,
-            #816C14 100%) border-box;
+        linear-gradient(90deg, #816C14 0%, #E1BE2C 50%, #816C14 100%) border-box;
     color: #D8C2F3;
-    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
 }
 
-.boton-cines__btn:hover {
+.pagina-detalle .boton-cines__btn:hover {
     opacity: 0.85;
 }
 
-.boton-cines__opciones {
+.pagina-detalle .boton-cines__opciones {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -279,11 +374,11 @@ main {
     transition: max-height 0.35s ease;
 }
 
-.boton-cines__opciones--visible {
+.pagina-detalle .boton-cines__toggle:checked~.boton-cines__opciones {
     max-height: 300px;
 }
 
-.boton-cines__opcion {
+.pagina-detalle .boton-cines__opcion {
     display: flex;
     width: 423px;
     height: 58px;
@@ -293,31 +388,28 @@ main {
     border-radius: 14px;
     background:
         linear-gradient(#D8C2F3, #D8C2F3) padding-box,
-        linear-gradient(90deg,
-            #816C14 0%,
-            #E1BE2C 50%,
-            #816C14 100%) border-box;
-    box-sizing: border-box;
+        linear-gradient(90deg, #816C14 0%, #E1BE2C 50%, #816C14 100%) border-box;
     cursor: pointer;
-    transition: opacity 0.2s ease;
+    font-weight: bold;
 }
 
-.boton-cines__opcion:hover {
+.pagina-detalle .boton-cines__opcion:hover {
     opacity: 0.85;
 }
 
-/* Esta seccion es de horarios */
-
-* {
-    box-sizing: border-box;
+.pagina-detalle .boton-cines__nombre {
     margin: 0;
-    padding: 0;
+    font-size: 16px;
+    color: #2E058B;
+    line-height: normal;
+    text-decoration: none;
 }
+
+
+/* SECCION HORARIOS */
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(180deg, #1f085e 0%, #4c289b 50%, #150540 100%);
-    min-height: 100vh;
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -329,35 +421,26 @@ body {
     margin: 4rem auto;
     padding: 0 2rem;
     display: grid;
-    grid-template-rows: auto auto;
     row-gap: 2.5rem;
 }
 
 .titulo-h {
     font-weight: 300;
     font-size: 2.2rem;
-    letter-spacing: -0.5px;
 }
 
 .acordeon {
     display: grid;
-    grid-template-columns: 1fr;
     row-gap: 1.25rem;
 }
 
 .acordeon-item {
-    background-color: #1a0066;
-    border-radius: 12px;
     transition: all 0.3s ease;
 
     display: grid;
     grid-template-rows: auto 0fr;
     overflow: hidden;
-
     position: relative;
-    border: 1px solid transparent;
-    background-clip: padding-box;
-
     border: 4px solid transparent;
     border-radius: 14px;
     background:
@@ -408,8 +491,6 @@ body {
 
 .primer-texto h2 {
     font-size: 1.2rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
     margin-bottom: 0.2rem;
 }
 
@@ -456,10 +537,7 @@ body {
     color: #b3a2f2;
     text-decoration: none;
     font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
     transition: color 0.2s ease;
-    display: inline-block;
 }
 
 .lista li a:hover {
@@ -467,22 +545,36 @@ body {
 }
 
 .audio {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-self: flex-start;
+    background-color: #D8C2F3;
+    color: #2E058B;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(136, 15, 15, 0.5);
+    width: 10vw;
+}
 
-            p {
-                font-family: 'avant garde semi', sans-serif;
-                font-size: 15px;
-                color: #D8C2F3
-            }
-        }
+.audio p {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+}
+
+.controles button {
+    background-color: #2E058B;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.controles button:hover {
+    background-color: #2E058B;
+}
 
 footer {
     background-color: #9d72dc;
-    color: #ffffff;
-    font-family: 'avant garde book', sans-serif;
     padding: 10px 20px;
     border-top: 15px solid #2a085c;
 }
@@ -493,19 +585,15 @@ footer .contenedor-footer {
     margin-top: 10px;
 }
 
-/* Estilos comunes para los h3 del footer */
 .contenedor-footer h3 {
     font-size: 14px;
     margin-bottom: 15px;
-    font-weight: bold;
-    letter-spacing: 0.5px;
 }
 
-/* ── Sección 1: Marca ── */
 #marca {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 7px;
 }
 
 #marca .eslogan {
@@ -515,11 +603,9 @@ footer .contenedor-footer {
 
 #marca .copyright {
     font-size: 11px;
-    margin-top: 25px;
     opacity: 0.7;
 }
 
-/* ── Sección 2: Email ── */
 #email {
     flex: 1.2;
     margin-left: 220px;
@@ -564,11 +650,9 @@ footer .contenedor-footer {
     color: #120038;
 }
 
-/* ── Sección 3: Navegación ── */
 
 #navegacion ul {
     list-style: none;
-    padding: 0;
     margin-right: 100px;
 }
 
@@ -588,7 +672,6 @@ footer .contenedor-footer {
     opacity: 0.9;
 }
 
-/* ── Sección 4: Redes ── */
 #redes {
     text-align: right;
     margin-right: 10px;
@@ -596,7 +679,7 @@ footer .contenedor-footer {
 
 .iconos-redes {
     display: flex;
-    gap: 12px;
+    gap: 7px;
     justify-content: flex-end;
 }
 
@@ -606,10 +689,237 @@ footer .contenedor-footer {
     justify-content: center;
     width: 35px;
     height: 35px;
-    border-radius: 50%;
     transition: transform 0.2s ease;
 }
 
 .iconos-redes img:hover {
     transform: scale(1.1);
+}
+
+@media (max-width: 1200px) {
+
+    header {
+        height: auto;
+        padding-bottom: 12px;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 16px;
+    }
+
+
+    header #botones {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    header #botones li a {
+        font-size: 13px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .contenedor-home {
+        padding: 24px 16px 40px 16px;
+        gap: 32px;
+    }
+
+    .tarjeta-destacada {
+        width: 180px;
+    }
+
+    .cuadricula-promos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        align-items: stretch;
+    }
+
+    .grilla-cartelera {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px 12px;
+    }
+
+    footer {
+        padding: 16px;
+    }
+
+    footer .contenedor-footer {
+        flex-direction: column;
+        gap: 32px;
+        padding: 16px 0 0 0;
+    }
+
+    .contenedor-footer h3 {
+        margin-bottom: 10px;
+    }
+
+    #marca .copyright {
+        margin-top: 8px;
+    }
+
+    #email {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .newsletter-input-group {
+        width: 100%;
+    }
+
+    #email input {
+        max-width: none;
+        flex: 1;
+    }
+
+    #redes {
+        text-align: left;
+        margin-right: 0;
+    }
+
+    .iconos-redes {
+        justify-content: flex-start;
+    }
+
+    #navegacion ul {
+        margin-right: 0;
+    }
+}
+
+
+@media (max-width: 675px) {
+
+    header {
+        height: auto;
+        padding-bottom: 12px;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    header .logo {
+        margin: 0;
+    }
+
+    header #botones {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    header #botones li a {
+        font-size: 13px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .contenedor-home {
+        padding: 20px 14px 36px 14px;
+        gap: 28px;
+    }
+
+    .subtitulo-seccion {
+        font-size: 20px;
+        margin-bottom: 14px;
+    }
+
+    .tarjeta-destacada {
+        width: 160px;
+    }
+
+    .cuadricula-promos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        align-items: stretch;
+    }
+
+    .grilla-cartelera {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px 10px;
+    }
+
+    footer {
+        padding: 16px;
+    }
+
+    footer .contenedor-footer {
+        flex-direction: column;
+        gap: 24px;
+        padding: 16px 0 0 0;
+        margin-top: 0;
+    }
+
+    .contenedor-footer h3 {
+        margin-bottom: 10px;
+    }
+
+    #marca .copyright {
+        margin-top: 8px;
+    }
+
+    #email {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .newsletter-input-group {
+        width: 100%;
+    }
+
+    #email input {
+        max-width: none;
+        flex: 1;
+    }
+
+    #redes {
+        text-align: left;
+        margin-right: 0;
+    }
+
+    .iconos-redes {
+        justify-content: flex-start;
+    }
+
+    #navegacion ul {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .contenedor-home {
+        padding: 16px 12px 32px 12px;
+    }
+
+    .subtitulo-seccion {
+        font-size: 19px;
+    }
+
+    .tarjeta-destacada {
+        width: 130px;
+    }
+
+    .grilla-cartelera {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 8px;
+    }
+
+    .cuadricula-promos {
+        grid-template-columns: 1fr;
+    }
 }

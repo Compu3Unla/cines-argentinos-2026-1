@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Cines Argentinos</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body class="body-general">
@@ -21,13 +22,15 @@
             </ul>
         </nav>
     </header>
-<main>
+
+<main class="proximos-estrenos">
     <section id="seccion-estrenos">
+        <h1 class="titulo-seccion">Próximos estrenos</h1>
         <div class="contenedor-acordeon">
             <article class="tarjeta-estreno activo">
-                <img src="imagenes/img_proximos_estrenos/minions-y-monstruos.png" alt="Minions">
+                <img src="imagenes/img_proximos_estrenos/minions-y-monstruos.png" alt="Minions" width="744" height="977">
                 <div class="bloque-info">
-                    <span class="fecha-estreno">Estreno el 25/06/2026</span>
+                    <h2 class="fecha-estreno">Estreno el 25/06/2026</h2>
                     <p>Esta es la historia desenfrenada, ridícula y totalmente real de cómo los Minions conquistaron
                         Hollywood, se convirtieron en estrellas de cine, perdieron todo, desataron monstruos sobre el
                         mundo y luego unieron fuerzas para intentar salvar al planeta del caos que ellos mismos crearon.
@@ -36,9 +39,9 @@
             </article>
 
             <article class="tarjeta-estreno">
-                <img src="imagenes/img_proximos_estrenos/toy-story5.png" alt="Toy Story 5">
+                <img src="imagenes/img_proximos_estrenos/toy-story5.png" alt="Toy Story 5" width="744" height="977">
                 <div class="bloque-info">
-                    <span class="fecha-estreno">Estreno el 12/07/2026</span>
+                    <h2 class="fecha-estreno">Estreno el 12/07/2026</h2>
                     <p>El regreso de Woody, Buzz y Jessie para enfrentar su mayor desafío: la tecnología y la obsesión
                         de
                         los niños por los dispositivos electrónicos, representados por una tableta inteligente llamada
@@ -48,18 +51,18 @@
             </article>
 
             <article class="tarjeta-estreno">
-                <img src="imagenes/img_proximos_estrenos/nada-entre-los-dos.png" alt="Nada entre los dos">
+                <img src="imagenes/img_proximos_estrenos/nada-entre-los-dos.png" alt="Nada entre los dos" width="744" height="977">
                 <div class="bloque-info">
-                    <span class="fecha-estreno">Estreno el 28/05/2026</span>
+                    <h2 class="fecha-estreno">Estreno el 28/05/2026</h2>
                     <p>Guillermo (Gael García Bernal) y Mechi (Natalia Oreiro) se conocen en un paradisíaco resort del Caribe, en medio de una reunión laboral de emergencia. Ambos están casados y arrastran vidas que ya no los representan: él, atrapado en un matrimonio rutinario bajo la presión de un suegro que parece manejar su vida; ella, con un trabajo que no la identifica, un marido lleno de proyectos fallidos y una hija que la rechaza.
                     </p>
                 </div>
             </article>
 
             <article class="tarjeta-estreno">
-                <img src="imagenes/img_proximos_estrenos/el-pasajero-del-diablo.png" alt="El pasajero del diablo">
+                <img src="imagenes/img_proximos_estrenos/el-pasajero-del-diablo.png" alt="El pasajero del diablo" width="744" height="977" >
                 <div class="bloque-info">
-                    <span class="fecha-estreno">Estreno el 21/05/2026</span>
+                    <h2 class="fecha-estreno">Estreno el 21/05/2026</h2>
                     <p>Tras presenciar un terrible accidente en la autopista, una joven pareja pronto se da cuenta de que no salieron ilesos del lugar del siniestro, pues una presencia demoníaca llamada el Pasajero, que no se detendrá hasta atraparlos a ambos, convierte su aventura en la carretera en una pesadilla.
                     </p>
                 </div>
@@ -70,20 +73,19 @@
 
 <footer>
     <div class="contenedor-footer">
-        <section id="marca">
-            <img src="#" alt="cines argentinos">
+        <div id="marca">
+            <img src="imagenes/elementos-svg/logo-cines-frase.svg" width="90px" height="40px" alt="cines argentinos">
             <p class="eslogan">Viví el cine, viví la experiencia</p>
             <p class="copyright">© 2026 Cines Argentinos. Todos los derechos reservados.</p>
-        </section>
+        </div>
 
-        <section id="email">
+        <div id="email">
             <h3>Recibí novedades y promociones</h3>
-            <!-- Correo -->
             <input type="email" name="Email" id="Email" placeholder="email...">
             <button type="submit" class="boton-enviar">ENVIAR</button>
-        </section>
+        </div>
 
-        <section id="navegacion">
+        <div id="navegacion">
             <h3>NAVEGACIÓN</h3>
             <ul>
                 <li><a href="index.html">Cartelera</a></li>
@@ -91,16 +93,16 @@
                 <li><a href="horarios.html">Horarios</a></li>
                 <li><a href="proximos-estrenos1.html">Estrenos</a></li>
             </ul>
-        </section>
+        </div>
 
-        <section id="redes">
+        <div id="redes">
             <h3>SEGUINOS</h3>
             <div class="iconos-redes">
-                <a href="#"><img src="imagenes/elementos-svg/logo-ig.svg" alt="instagram"></a>
-                 <a href="#"><img src="imagenes/elementos-svg/logo-facebook.svg" alt="facebook"></a>
-                  <a href="#"><img src="imagenes/elementos-svg/logo-x.svg" alt="twitter"></a>
+                <a href="#"><img src="imagenes/elementos-svg/logo-ig.svg" width="30" height="30" alt="instagram"></a>
+                 <a href="#"><img src="imagenes/elementos-svg/logo-facebook.svg" width="30" height="30" alt="facebook"></a>
+                  <a href="#"><img src="imagenes/elementos-svg/logo-x.svg" width="30" height="30" alt="twitter"></a>
             </div>
-        </section>
+        </div>
         </div>
     </footer>
 </body>

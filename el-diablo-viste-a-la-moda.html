@@ -5,79 +5,88 @@
     <meta charset="utf-8">
     <title>Cines Argentinos</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
-<body>
+<body class="pagina-detalle">
+  <header>
+        <nav>
+            <div class="logo">
+                <img src="imagenes/elementos-svg/logo-header.svg">
+            </div>
 
-    <a href="index.html" class="flecha" aria-label="Volver">
+            <ul id="botones">
+                <li><a href="index.html">Cartelera</a></li>
+                <li><a href="proximos-estrenos1.html">Próximos estrenos</a></li>
+                <li><a href="horarios.html">Horarios</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+  <main>
+ 
+    <div class="detalle">
+ 
+      <a href="index.html" class="flecha" aria-label="Volver">
         <img src="imagenes/elementos-svg/flecha-atras.svg" alt="Volver" width="21" height="20">
-    </a>
-
-    <section class="detalle__contenido">
-        <img class="detalle__poster" src="imagenes/imag_individuales_medidas_422x593/diablo-viste-a-la-moda-422x593.png"
-            alt="Poster diablo viste a la moda" width="422" height="593">
-
-
+      </a>
+ 
+      <section class="detalle__contenido">
+ 
+        <img class="detalle__poster" src="imagenes/imag_individuales_medidas_422x593/diablo-viste-a-la-moda-422x593.png" alt="Poster El Diablo Viste a la Moda 2" width="422" height="593">
+ 
         <div class="detalle__info">
-
-            <h2 class="detalle__titulo">EL DIABLO VISTE A LA MODA 2</h2>
-
-            <div class="detalle__datos">
-                <ul class="detalle__duracion-etc">
-                    <li>Duración:</li>
-                    <li>Fecha de estreno:</li>
-                    <li>Formatos disponibles:</li>
-                    <li>Distribuidor:</li>
-                    <li>Género:</li>
-                    <li>Idioma:</li>
-                </ul>
-                <ul class="detalle__valores">
-                    <li>2h 00m</li>
-                    <li>29 de abril 2026</li>
-                    <li>2D XTREMO · 2D · COMFORT PLUS 2D · SALA PLATINUM</li>
-                    <li>THE WALT DISNEY COMPANY ARGENTINA S.A.</li>
-                    <li>Comedia Dramatica</li>
-                    <li>Español, Inglés Subtitulada</li>
-                </ul>
+ 
+          <h1 class="detalle__titulo">EL DIABLO VISTE A LA MODA 2</h1>
+ 
+          <div class="detalle__datos">
+            <ul class="detalle__duracion-etc">
+              <li>Duración:</li>
+              <li>Fecha de estreno:</li>
+              <li>Formatos disponibles:</li>
+              <li>Distribuidor:</li>
+              <li>Género:</li>
+              <li>Idioma:</li>
+            </ul>
+            <ul class="detalle__valores">
+              <li>2h 00m</li>
+              <li>29 de Abril, 2026</li>
+              <li>2D XTREMO · 2D · COMFORT PLUS 2D · SALA PLATINUM</li>
+              <li>THE WALT DISNEY COMPANY ARGENTINA S.A.</li>
+              <li>Comedia Dramática</li>
+              <li>Español, Inglés Subtitulada</li>
+            </ul>
+          </div>
+ 
+          <p class="detalle__sinopsis">
+            La trama sigue a Miranda Priestly en el ocaso de su carrera, enfrentando el declive de las revistas impresas y la digitalización de los medios. Para salvar su legado y mantener a flote la revista Runway, Miranda se ve obligada a reencontrarse con su exasistente, Emily Charlton. Emily ahora es una influyente ejecutiva de un poderoso grupo de lujo que maneja presupuestos publicitarios millonarios, lo que invierte la dinámica original: ahora Miranda es quien necesita el favor de Emily para sobrevivir en el nuevo ecosistema de la moda. Además, la película explora el regreso de Andy Sachs, quien tras alcanzar el éxito como periodista, vuelve a cruzarse en el camino de su antigua jefa en un escenario de alta tensión competitiva.
+          </p>
+ 
+          <div class="boton-cines">
+            <input type="checkbox" id="btnCinesToggle" class="boton-cines__toggle">
+            <label for="btnCinesToggle" class="boton-cines__btn">cines</label>
+            <div class="boton-cines__opciones">
+              <div class="boton-cines__opcion">
+                <a href="https://multiplex.com.ar/?utm_source=google&utm_medium=cpc&utm_campaign=22627677056&utm_content=180978942152&utm_term=multiplex&gad_source=1&gad_campaignid=22627677056&gbraid=0AAAAADJ9N9jovgQSdW-7PkL6B4JM4eVbZ&gclid=Cj0KCQjwrs7RBhDuARIsAIVfBD3gx6D92RRbmfJLaD5qY9yWnqnxOICledqBqhzFAklyXzGQqybz1NEaAp7IEALw_wcB" class="boton-cines__nombre">multiplex</a>
+              </div>
+              <div class="boton-cines__opcion">
+                <a href="https://www.cinemark.com.ar/?gad_source=1&gad_campaignid=17439731004&gbraid=0AAAAAC_nbNM5vk9GXD0jhl2VvS_eV_CHF&gclid=Cj0KCQjwrs7RBhDuARIsAIVfBD1sl7_CY5HnyxiDhuL-IfpeNkNA62iJxeFOXy5VAv7a9_MCmrkVZa8aAis5EALw_wcB" class="boton-cines__nombre">cinemark</a>
+              </div>
+              <div class="boton-cines__opcion">
+                <a href="https://www.cinemaadrogue.com/?https://www.cinemaadrogue.com/&utm_source=google&utm_medium=cpc&utm_campaign=cinemaadrogue-cartelera-clics&gad_source=1&gad_campaignid=23812935322&gbraid=0AAAAADpCTIPDtyhkufpNlgro9wVVQCR3M&gclid=Cj0KCQjwrs7RBhDuARIsAIVfBD0MtY7Q4joZzBqunYIFhByqyvdUtlGDuFbePLJsoksOs4QoIFb71CEaAimAEALw_wcB" class="boton-cines__nombre">cinema</a>
+              </div>
             </div>
-
-            <p class="detalle__sinopsis">
-                La trama sigue a Miranda Priestly en el ocaso de su carrera, enfrentando el declive de las revistas impresas y la digitalización de los medios. Para salvar su legado y mantener a flote la revista Runway, Miranda se ve obligada a reencontrarse con su exasistente, Emily Charlton. Emily ahora es una influyente ejecutiva de un poderoso grupo de lujo que maneja presupuestos publicitarios millonarios, lo que invierte la dinámica original: ahora Miranda es quien necesita el favor de Emily para sobrevivir en el nuevo ecosistema de la moda. Además, la película explora el regreso de Andy Sachs, quien tras alcanzar el éxito como periodista, vuelve a cruzarse en el camino de su antigua jefa en un escenario de alta tensión competitiva. 
-            </p>
-
-            <div class="boton-cines">
-                <button class="boton-cines__btn" id="btnCines" aria-expanded="false">
-                    cines
-                </button>
-                <div class="boton-cines__opciones" id="opcionesCines">
-                    <div class="boton-cines__opcion">
-                        <p class="boton-cines__nombre">multiplex</p>
-                    </div>
-                    <div class="boton-cines__opcion">
-                        <p class="boton-cines__nombre">cinemark</p>
-                    </div>
-                    <div class="boton-cines__opcion">
-                        <p class="boton-cines__nombre">cinema</p>
-                    </div>
-                </div>
-            </div>
-
+          </div>
+ 
         </div>
-    </section>
-
-    </main>
-
-    <script>
-        const btn = document.getElementById('btnCines');
-        const opciones = document.getElementById('opcionesCines');
-
-        btn.addEventListener('click', () => {
-            const abierto = opciones.classList.toggle('boton-cines__opciones--visible');
-            btn.setAttribute('aria-expanded', abierto);
-        });
-    </script>
-
+      </section>
+ 
+    </div>
+ 
+  </main>
+ 
 </body>
+
 
 </html>
 
